@@ -1,5 +1,9 @@
+import s from './Profile.module.css'
+
+console.log(s)
+
 const Profile = () => {
-  return (<div className='content'>
+  return (<div className={s.content}>
   <div>
     <img  src='https://via.placeholder.com/800x70'/>
   </div>
@@ -16,11 +20,11 @@ const Profile = () => {
     </div>
 
     <div>
-      <div>
+      <div className={s.item}>
         Post 1
       </div>
 
-      <div>
+      <div className={`${s.item} ${s.big}`}>
         Post 2
       </div>
     </div>
