@@ -13,7 +13,7 @@ const Profile = () => {
   <div>
     AVA+DISCRIP
   </div>
-<MyPosts />
+<MyPosts message='Message from my post'/>
 </div>);
 }
 
