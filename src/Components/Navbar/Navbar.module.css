@@ -10,6 +10,13 @@
   border: rgb(189, 130, 130) 1px solid;
 }
 
-.item.active{
-  background-color: rgb(216, 112, 112);
+.item a{
+  color: white;
+  text-decoration: none;
+}
+.item a:hover{
+  color: rgb(240, 200, 200);
+}
+.item a.active{
+  color: rgb(243, 207, 3);
 }

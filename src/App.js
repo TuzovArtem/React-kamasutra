@@ -17,10 +17,10 @@ const   App = () => {
       <Navbar />
       <div className='app-wrapper-content'>
        <Route path='/dialogs' component={Dialogs}/>
-       <Route path='/Profile' component={Profile}/> 
-       <Route path='/Music' component={Music}/> 
-       <Route path='/Settings' component={Settings}/> 
-       <Route path='/News' component={News}/> 
+       <Route path='/profile' component={Profile}/> 
+       <Route path='/music' component={Music}/> 
+       <Route path='/settings' component={Settings}/> 
+       <Route path='/news' component={News}/> 
       </div>
     </div>
   </BrowserRouter>
