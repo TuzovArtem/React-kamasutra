@@ -1,1 +1,25 @@
+.dialogs{
+  display: grid;
+  grid-template-columns: 2fr 10fr;
+}
+
+.dialogs_items{
+  
+}
+
+.dialogs_item.active{
+ background-color: rgb(206, 86, 82);
+ border:1px solid black;
+}
+
+.dialogs_item{
+
+}
+
+.messages{
+}
+
+.message{
+
+}
 
