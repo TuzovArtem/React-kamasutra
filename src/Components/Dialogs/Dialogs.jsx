@@ -1,31 +1,7 @@
 import  s from './Dialogs.module.css';
-import {NavLink} from "react-router-dom";
+import DialogItem from './DialogsItem/DialogItem';
+import Message from './Message/Message';
 
-
-
-
-  const  Dialog = (props) => {
-    const path = `/dialogs/${props.id}`;
-    
-    return(
-      <div className= {s.dialogs_item} >
-          <NavLink to={path} activeClassName={s.active}> {props.name}  </NavLink>
-       </div>
-    );
-  }
-
-  const Message = (props) => {
-      
-    return(
-      <div className={s.messageWrapper}>
-        <div className={s.message}> {props.message} </div>
-        <div className={s.likeCount}> {props.likeCount}&#10084; </div>
-      </div>
-    );
-  }
-
-
-  
   const Dialogs = (props) => {
     
 let dialogsData = [ 
@@ -38,8 +14,9 @@ let dialogsData = [
 let messagesData = [
   {id:1, message:'Hi', likeCount:12},
   {id:2, message:'Hellow, how are you?',likeCount:1234},
+  {id:3, message:'Hellow world!',likeCount:234},
 ]
-let dialogsElements = dialogsData.map( dialog => <Dialog name={dialog.name}  id={dialog.id}/>);
+let dialogsElements = dialogsData.map( dialog => <DialogItem name={dialog.name}  id={dialog.id}/>);
 let messageElements = messagesData.map( messageEl => <Message message ={messageEl.message} likeCount={messageEl.likeCount} /> )
 
 
