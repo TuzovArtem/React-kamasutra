@@ -1,13 +1,28 @@
+.dialogs{
+  display: grid;
+  grid-template-columns: 2fr 10fr;
+}
 
+.dialogs_items{
+  font-size: 20px;
+  margin-left:7px;
+}
+
+.dialogs_item a.active{
+ color: rgb(196, 140, 150)
+}
 
 .dialogs_item{
 
 }
 
-.messages{
+.messageWrapper{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 7px;
 }
 
-.message{
+.likeCount{
 
 }
 
