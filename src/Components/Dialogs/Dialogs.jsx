@@ -35,30 +35,21 @@ let dialogsData = [
   {id:4, name:'Sasha'},
   {id:5, name:'Lena'},
 ]
-
-
 let messagesData = [
   {id:1, message:'Hi', likeCount:12},
   {id:2, message:'Hellow, how are you?',likeCount:1234},
- 
 ]
+let dialogsElements = dialogsData.map( dialog => <Dialog name={dialog.name}  id={dialog.id}/>);
+let messageElements = messagesData.map( messageEl => <Message message ={messageEl.message} likeCount={messageEl.likeCount} /> )
+
+
     return(
       <div className={s.dialogs}>
         <div className={s.dialogs_items }>
-
-          <Dialog name={dialogsData[0].name}  id={dialogsData[0].id}/>
-          <Dialog name={dialogsData[1].name} id={dialogsData[1].id}/>
-          <Dialog name='Ivan'  id='3'/>
-          <Dialog name='Lena'  id='4'/>
-          <Dialog name='Ura'  id='5'/>
-
-         
+          {dialogsElements}        
         </div>
-
         <div className={s.messages}>
-         <Message message ={messagesData[0].message} likeCount={messagesData[0].likeCount} />
-         <Message message ={messagesData[1].message} likeCount={messagesData[1].likeCount}/>
-         <Message message = '3-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quasi.qfrawfawfawfwq' />
+          {messageElements}       
         </div>
       </div>
     );
