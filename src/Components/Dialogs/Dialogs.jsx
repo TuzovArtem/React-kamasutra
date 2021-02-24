@@ -4,20 +4,9 @@ import Message from './Message/Message';
 
   const Dialogs = (props) => {
     
-let dialogsData = [ 
-  {id:1, name:'Dmitrich'},
-  {id:2, name:'Petr'},
-  {id:3, name:'Ivan'},
-  {id:4, name:'Sasha'},
-  {id:5, name:'Lena'},
-]
-let messagesData = [
-  {id:1, message:'Hi', likeCount:12},
-  {id:2, message:'Hellow, how are you?',likeCount:1234},
-  {id:3, message:'Hellow world!',likeCount:234},
-]
-let dialogsElements = dialogsData.map( dialog => <DialogItem name={dialog.name}  id={dialog.id}/>);
-let messageElements = messagesData.map( messageEl => <Message message ={messageEl.message} likeCount={messageEl.likeCount} /> )
+
+let dialogsElements = props.dialogsData.map( dialog => <DialogItem name={dialog.name}  id={dialog.id}/>);
+let messageElements = props.messagesData.map( messageEl => <Message message ={messageEl.message} likeCount={messageEl.likeCount} /> )
 
 
     return(
