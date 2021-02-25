@@ -21,7 +21,16 @@ let state = {
       {id:2, message:'Hellow, how are you?',likeCount:1234},
       {id:3, message:'Hellow world!',likeCount:234},
     ]
-  }
+  },
+    friends:{
+      friendsName:[ 
+          {id:1, name:'Misha', secondName:'Ivanov'},
+          {id:2, name:'Evgeniy',secondName:'Petrov'},
+          {id:3, name:'Artem',secondName:'Sidorov'},
+          {id:4, name:'Oleg',secondName:'Zausaev'},
+          {id:5, name:'Anatoliy',secondName:'Mironov'},
+        ]
+    }
 }
 
 export default state;

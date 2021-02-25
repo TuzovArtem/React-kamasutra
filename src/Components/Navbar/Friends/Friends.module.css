@@ -1,0 +1,13 @@
+
+
+.friends{
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 50px;
+  max-width: 200px;
+}
+.friends_item{
+  word-wrap: break-word;
+  text-align: center;
+}

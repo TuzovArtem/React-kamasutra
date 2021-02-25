@@ -10,12 +10,11 @@ import Settings from './Components/Settings/Settings';
 import { BrowserRouter, Route, Link } from "react-router-dom";
 
 const   App = (props) => {
-  console.log(props)
   return (
   <BrowserRouter>
     <div className='app-wrapper'>
       <Header />
-      <Navbar />
+      <Navbar friendsInfo = {props.state.friends} />
       <div className='app-wrapper-content'>
        <Route path='/dialogs' 
         render = { ()=> <Dialogs 
