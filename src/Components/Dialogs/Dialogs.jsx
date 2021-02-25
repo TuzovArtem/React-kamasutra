@@ -17,6 +17,11 @@ let messageElements = props.messagesData.map( messageEl => <Message message ={me
         <div className={s.messages}>
           {messageElements}       
         </div>
+
+      <div>
+        <textarea name="" id="" cols="7" rows="2"></textarea>
+        <button>Отправить</button>
+      </div>
       </div>
     );
   }
