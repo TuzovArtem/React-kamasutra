@@ -8,6 +8,9 @@
   background-color:rgb(238, 223, 223)
 }
 
-.posts{
-  margin-left: 15px;
+.textarea, h3, .button{
+  margin-left: 10px;
+}
+.button{
+  margin-bottom: 15px;
 }
