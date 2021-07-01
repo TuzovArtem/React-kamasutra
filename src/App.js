@@ -12,26 +12,11 @@ import { BrowserRouter, Route, Link } from "react-router-dom";
 const   App = (props) => {
   
   return (
-  <BrowserRouter>
-    <div className='app-wrapper'>
-      <Header />
-      <Navbar friendsInfo = {props.state.friends} />
-      <div className='app-wrapper-content'>
-       <Route path='/dialogs' 
-            render = { ()=> <Dialogs 
-                dialogsData={props.state.dialogsPage.dialogsData}
-                messagesData={props.state.dialogsPage.messagesData}/> }/>
-       <Route path='/profile' 
-            render = { ()=> <Profile 
-                postData={props.state.profilePage}
-                addPost={props.addPost} 
-                updateNewPostText={props.updateNewPostText}/> }/> 
-       <Route path='/music' render = { ()=> <Music/> }/>
-       <Route path='/settings' render = { ()=> <Settings/> }/>
-       <Route path='/news' render = { ()=> <News/> }/> 
-      </div>
-    </div>
-  </BrowserRouter>
+    <ul>
+      <li>HTML </li>
+      <li>CSS </li>
+      <li>JS </li>
+    </ul>
 
   );
 }
