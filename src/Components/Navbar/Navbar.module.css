@@ -2,3 +2,11 @@
   grid-area: n;
   background-color:greenyellow;
 }
+
+a{
+  color:rgb(168, 168, 168);
+}
+
+.active{
+  color:brown;
+}
