@@ -1,18 +1,18 @@
+import react from 'react'
+import classes from './Post.module.css'
 
-import s from './Post.module.css'
 
-
-const Posts =  (props) => {
-  return (
-    <div className={s.item}>
-      <img src='https://static8.depositphotos.com/1207999/1027/i/600/depositphotos_10275820-stock-photo-business-man-suit-avatar.jpg' />
-       {props.message}
-       <div className={s.like}>
-       <span > like = {props.likeCount} </span>
-       </div>
+const Post = () => {
+  return(
+  
+    <div className={classes.post}>
+     <img className={classes.avatar} src='https://via.placeholder.com/30' />  
+     <div>post text </div>   
     </div>
+        
 
+    
   )
 }
 
-export default Posts;
+export default Post

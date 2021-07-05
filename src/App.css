@@ -8,14 +8,7 @@
   grid-gap: 10px;
 }
 
-.header{
-  grid-area: h;
-  background-color:green;
-}
-.nav{
-  grid-area: n;
-  background-color:greenyellow;
-}
+
 .content{
   grid-area: c;
   background-color:hotpink;

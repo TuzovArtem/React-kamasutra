@@ -1,0 +1,15 @@
+
+
+.list{
+  display: flex;
+  background:green;
+  width: 100%;
+  grid-area: h;
+  margin: 0;
+}
+.item{
+  width: 150px;
+}
+.link{
+ cursor: pointer;
+}
