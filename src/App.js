@@ -13,14 +13,16 @@ import { BrowserRouter, Route, Link } from "react-router-dom";
 const   App = (props) => {
   
   return (
-    <div className="app-wrapper">
-      <Header />
-      <Navbar />
-      <div className='content'>
-      {/* <Profile /> */}
-      <Dialogs />
+    <BrowserRouter>
+      <div className="app-wrapper">
+        <Header />
+        <Navbar />
+        <div className='content'>
+          <Route path='/dialogs' component={Dialogs} />
+          <Route path='/profile' component={Profile} />
+        </div>
       </div>
-    </div>
+    </BrowserRouter>
   );
 }
 
