@@ -5,7 +5,7 @@ import classes from './Profile.module.css'
 
 const Profile = () => {
   return(
-    <div className={classes.content}>
+    <div>
         <img src='https://via.placeholder.com/1200x300' />
         <div>ava + discription </div>
         <MyPosts />
