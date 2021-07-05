@@ -6,9 +6,9 @@ const Navbar = () =>{
     <ul>
       <li> <a href='/profile'>Profile</a> </li>
       <li> <a href='/dialogs'>Message</a> </li>
-      <li> <a>News</a> </li>
-      <li> <a>Music</a> </li>
-      <li> <a>Settings</a> </li>  
+      <li> <a href='/news'>News</a> </li>
+      <li> <a href='/music'>Music</a> </li>
+      <li> <a href='/settings'>Settings</a> </li>  
     </ul>
   </nav>)
 }

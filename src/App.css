@@ -4,7 +4,7 @@
   "h h"
   "n c" ;
   grid-template-columns: 160px 1fr;
-  grid-template-rows: 1fr 5fr;
+  grid-template-rows: 30px 5fr;
   grid-gap: 10px;
 }
 
