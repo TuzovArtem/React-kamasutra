@@ -1,5 +1,5 @@
 import react from 'react'
-import MyPosts from './MyPosts/MyPosts'
+import MyPosts from './Myposts/MyPosts'
 import classes from './Profile.module.css'
 
 
