@@ -1,13 +1,14 @@
 import react from 'react'
-import MyPosts from './Myposts/MyPosts'
-import classes from './Profile.module.css'
+import MyPosts from './Myposts/MyPosts';
+import ProfileInfo from './ProfileInfo/ProfileInfo'
+import classes from './Profile.module.css';
+
 
 
 const Profile = () => {
   return(
     <div>
-        <img src='https://via.placeholder.com/1200x300' />
-        <div>ava + discription </div>
+        <ProfileInfo />
         <MyPosts />
 
     </div>
