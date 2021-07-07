@@ -9,6 +9,9 @@ import Music from './Components/Music/Music';
  import logo from './Simple_LOGO.png'
 import { BrowserRouter, Route, Link } from "react-router-dom";
 
+let props
+
+
 const   App = (props) => {
   
   return (
