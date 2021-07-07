@@ -1,17 +1,26 @@
-import react from 'react'
-import classes from './MyPosts.module.css'
-import Post from './Post/Post'
-import NewPost from './NewPost/NewPost'
+import react from "react";
+import classes from "./MyPosts.module.css";
+import Post from "./Post/Post";
+import NewPost from "./NewPost/NewPost";
 
 const MyPosts = () => {
-  return(
-    
-  <div className={classes.my_posts}>My post 
-    <NewPost />
-    <Post message='Hi, how are you?' like='140' />
-    <Post message='Am fine, you?' like= '14' />
-  </div>
-  )
-}
+  let postData = [
+    { text: "My First post", likes: 14225250, id: 1 },
+    { text: "Second post is here", likes: 0, id: 2 },
+    { text: "It is Third post", likes: 14210, id: 3 },
+    { text: "Post number two plus two", likes: 110, id: 4 },
+  ];
 
-export default MyPosts
+  let postElements = postData.map( item => <Post text={item.text} like={item.likes} key={item.id} />
+  ));
+
+  return (
+    <div className={classes.my_posts}>
+      My post
+      <NewPost />
+      {postElements}
+    </div>
+  );
+};
+
+export default MyPosts;

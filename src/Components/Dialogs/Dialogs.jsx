@@ -1,48 +1,50 @@
-import React from 'react'
-import classes from './Dialogs.module.css';
-import {NavLink} from 'react-router-dom';
+import React from "react";
+import classes from "./Dialogs.module.css";
+import { NavLink } from "react-router-dom";
+
+const DialogItem = (props) => {
+  let path = `/dialogs/` + props.id;
+  return (
+    <div className={classes.dialogs + " " + classes.active}>
+      <NavLink to={path}>{props.name} </NavLink>
+    </div>
+  );
+};
+
+const Message = (props) => {
+  return <div className={classes.message}> {props.text} </div>;
+};
 
 
-const DialogItem = (props) =>{
+const Dialogs = ( props) => {
+  
+  let dialogsData = [
+    { name: "Andrey", id: 1 },
+    { name: "Dimych", id: 2 },
+    { name: "Sveta", id: 3 },
+    { name: "Sasha", id: 4 },
+    { name: "Viktor", id: 5 },
+  ];
 
-  let path = `/dialogs/` + props.id
-  return(
-    <div className={classes.dialogs + ' ' + classes.active}>
-         <NavLink to={path}>{props.name} </NavLink> 
-         </div>
-  )
-}
+  let messagesData = [
+    {message:"Hello", id:"1"},
+    {message:"Hi,Are you ok?", id:"2"},
+    {message:"Rnice", id:"3"}
+  ]
 
-const Message = (props)=>{
+  let dialogsElement = dialogsData.map(   item => <DialogItem name={item.name} key={item.id} />);
+  let messagesElement = messagesData.map( item => <Message text={item.message} key={item.id} /> );
 
-  return( 
-    <div className={classes.message}> {props.text} </div>
-  )
-}
-
-
-const Dialogs  = () =>{
-  return( 
+  return (
     <div className={classes.dialogs}>
       <div className={classes.dialogs__item}>
-
-       <DialogItem name='Andrey' id='1' />
-       <DialogItem name='Dimych' id='2' />
-       <DialogItem name='Sveta' id='3' />
-       <DialogItem name='Sasha' id='4' />
-       <DialogItem name='Viktor' id='5' />
-       <DialogItem name='Valera' id='6' />
-
-       
+        {dialogsElement}
       </div>
       <div className={classes.messages}>
-        <Message text="Hello" />
-        <Message text="Hi,Are you ok?" />
-        <Message text="Rnice" />
-       
+        {messagesElement}  
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Dialogs
+export default Dialogs;

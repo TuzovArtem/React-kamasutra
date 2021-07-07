@@ -9,7 +9,7 @@ const Post = (props) => {
   
     <div className={classes.post}>
      <img className={classes.avatar} src='https://via.placeholder.com/30' />  
-     <div> {props.message} </div>   
+     <div> {props.text} </div>   
      <div className={classes.like}> {props.like} liks </div>
     </div>
         
