@@ -11,8 +11,7 @@ const MyPosts = () => {
     { text: "Post number two plus two", likes: 110, id: 4 },
   ];
 
-  let postElements = postData.map( item => <Post text={item.text} like={item.likes} key={item.id} />
-  ));
+  let postElements = postData.map( item => <Post text={item.text} like={item.likes} key={item.id} />);
 
   return (
     <div className={classes.my_posts}>

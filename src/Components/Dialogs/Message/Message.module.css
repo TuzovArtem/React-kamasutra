@@ -1,0 +1,15 @@
+
+
+
+
+.messages{
+ padding-left: 10px; 
+ background-color:rgb(141, 16, 16);
+ border: 1px white solid;
+ margin-top: 1px;
+ 
+}
+
+.active{
+  color: rgb(37, 184, 1);
+}
