@@ -7,6 +7,7 @@ let data = {
       {message:"Rnice", id:"3"},
       {message:"Allier", id:"4"}
     ],
+
     dialogsData : [
       { name: "Andrey", id: 1 },
       { name: "Dimych", id: 2 },
@@ -23,7 +24,17 @@ let data = {
       { text: "It is Third post", likes: 14210, id: 3 },
       { text: "Post number two plus two", likes: 110, id: 4 },
     ]
-  } 
+  }, 
+
+  friendsBlock:{
+    friendsInfo:[
+      { id:1, firstName:'Ivan', secondName:'Revizov'},
+      { id:2, firstName:'Mariya', secondName:'Nizova'},
+      { id:3, firstName:'Sveta', secondName:'Orlova'},
+      { id:4, firstName:'Elena', secondName:'Proscunova'},
+      { id:5, firstName:'Sergey', secondName:'Lazarev'}
+    ]    
+  }
 }
 
 

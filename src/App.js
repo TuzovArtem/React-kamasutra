@@ -20,7 +20,7 @@ const   App = (props) => {
     <BrowserRouter>
       <div className="app-wrapper">
         <Header />
-        <Navbar />
+        <Navbar friendsInfo={props.data.friendsBlock.friendsInfo}/>
         <div className='content'>
           <Route path='/dialogs'  render={ ()=> <Dialogs dialogsData={props.data.messagesPage.dialogsData}
                                                          messagesData={props.data.messagesPage.messagesData} />} />

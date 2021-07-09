@@ -1,15 +1,17 @@
 
-
-
-
 .messages{
  padding-left: 10px; 
  background-color:rgb(141, 16, 16);
  border: 1px white solid;
  margin-top: 1px;
- 
+ color:rgb(245, 41, 41) ;
 }
 
 .active{
   color: rgb(37, 184, 1);
+}
+
+.interlocutor{
+  text-align: right;
+  color:rgb(230, 79, 79)
 }

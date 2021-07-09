@@ -1,9 +1,10 @@
 .app-wrapper{
+  max-width: 1400px;
   display: grid;
   grid-template-areas:
   "h h"
   "n c" ;
-  grid-template-columns: 160px 1fr;
+  grid-template-columns: 174px 1fr;
   grid-template-rows: 30px 5fr;
   grid-gap: 10px;
 }
