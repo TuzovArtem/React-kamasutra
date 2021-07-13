@@ -9,15 +9,22 @@ const NewPost = (props) => {
   let addPost = ()=>{
     let text = newPostElement.current.value;
     props.addPost(text);
-    debugger;
+    newPostElement.current.value = '';
+
+  }
+
+  let changeNewPostText = () =>{
+    let newText = newPostElement.current.value
+    props.changeNewPostText(newText)
+
   }
   
   
   return(
         <div className={classes.new_post}>
 
-          <textarea name="" id="" cols="30" rows="3" ref = {newPostElement}></textarea>
-          <button onClick = {  addPost }> Add post</button>
+          <textarea name="" id="" cols="30" rows="3" ref = {newPostElement}  value = {props.newPostText} onChange = { changeNewPostText} />
+          <button onClick = {addPost}> Add post</button>
           <button>Add post</button>
 
            </div>

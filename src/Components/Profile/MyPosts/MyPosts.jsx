@@ -11,7 +11,9 @@ const MyPosts = (props) => {
   return (
     <div className={classes.my_posts}>
       My post
-      <NewPost addPost={props.addPost}/>
+      <NewPost addPost={props.addPost}
+               newPostText={props.newPostText}
+               changeNewPostText={props.changeNewPostText}/>
       {postElements}
     </div>
   );
