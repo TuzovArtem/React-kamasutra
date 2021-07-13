@@ -38,4 +38,14 @@ let data = {
 }
 
 
+export let addPost = (postMessage) =>{
+  let newPost = {
+    id:5,
+    text:postMessage,
+    likes:0
+  }
+ 
+ data.profilePage.postData.push(newPost)
+}
+
 export default data;

@@ -7,10 +7,11 @@ const MyPosts = (props) => {
 
   let postElements = props.postData.map( item => <Post text={item.text} like={item.likes} key={item.id} />);
 
+  
   return (
     <div className={classes.my_posts}>
       My post
-      <NewPost />
+      <NewPost addPost={props.addPost}/>
       {postElements}
     </div>
   );
