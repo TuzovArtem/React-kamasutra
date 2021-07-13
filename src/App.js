@@ -9,13 +9,7 @@ import Settings from './Components/Settings/Settings';
 import logo from './Simple_LOGO.png'
 import { BrowserRouter, Route, Link } from "react-router-dom";
 
-
-
-
 const   App = (props) => {
-  
- 
-
   return (  
       <div className="app-wrapper">
         <Header />
@@ -32,8 +26,5 @@ const   App = (props) => {
       </div>
   );
 }
-
-
-
 
 export default App;
