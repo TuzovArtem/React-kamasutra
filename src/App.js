@@ -6,7 +6,6 @@ import Dialogs from './Components/Dialogs/Dialogs';
 import News from './Components/News/News';
 import Music from './Components/Music/Music';
 import Settings from './Components/Settings/Settings';
-import logo from './Simple_LOGO.png'
 import { BrowserRouter, Route, Link } from "react-router-dom";
 
 const   App = (props) => {

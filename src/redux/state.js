@@ -1,4 +1,9 @@
-import {rerenderEntireTree} from "./../render"
+
+
+let rerenderEntireTree =  () =>{
+  console.log("rerender tree")
+
+}
 
 let data = {
   messagesPage:  {
@@ -57,8 +62,6 @@ export let changeNewPostText = (newText) =>{
   rerenderEntireTree (data)
 }
 
-
-
 export let changeNewMessageText = (newText) =>{
   data.messagesPage.newMessageText = newText;
   rerenderEntireTree (data);
@@ -74,6 +77,9 @@ export let addNewMessage = () => {
   rerenderEntireTree (data);
 }
 
+export let subscribe = (observer) =>{
+  rerenderEntireTree = observer;
+}
 
 window.data = data;
 
