@@ -1,6 +1,6 @@
 
 let store ={
-   data:{
+   _data:{
     messagesPage:  {
       messagesData : [
         {message:"Hello", id:"1"},
@@ -38,43 +38,73 @@ let store ={
       ]    
     }
   },
-  getStore(){
-    return this.data
-  },
-  addPost(){
-    let newPost = {
-      id:this.data.profilePage.postData.length+1,
-      text:this.data.profilePage.newPostText,
-      likes: Math.floor (Math.random()*1000)
-    }
-    
-    this.data.profilePage.postData.push(newPost);
-    this.data.profilePage.newPostText = '';
-    store.rerenderEntireTree (this.data);
-  },
-  changeNewPostText(newText){
-    this.data.profilePage.newPostText = newText;
-    store.rerenderEntireTree (this.data)
-  },
-  changeNewMessageText(newText){
-    this.data.messagesPage.newMessageText = newText;
-    store.rerenderEntireTree (this.data);
-  },
-  addNewMessage(){
-    let newMessage = {
-      id:this.data.messagesPage.messagesData.length+1,
-      message:this.data.messagesPage.newMessageText,
-    }
-    this.data.messagesPage.messagesData.push(newMessage);
-    this.data.messagesPage.messagesData.newMessageText='';
-    store.rerenderEntireTree (this.data);
-  },
-  subscribe(observer){
-    store.rerenderEntireTree = observer;
-  },
-  rerenderEntireTree(){
+  _callSubscriber(){
     console.log('Rerender')
-  }
+  },
+
+  subscribe(observer){
+    store._callSubscriber = observer;
+  },
+  getState(){
+    return this._data
+  },
+
+  dispatch(action){
+    if(action.type === "ADD-POST"){
+      let newPost = {
+        id:this._data.profilePage.postData.length+1,
+        text:this._data.profilePage.newPostText,
+        likes: Math.floor (Math.random()*1000)
+      }
+      
+      this._data.profilePage.postData.push(newPost);
+      this._data.profilePage.newPostText = '';
+      store._callSubscriber (this._data);
+    }else if ( action.type === "CHANGE-NEW-POST-TEXT"){
+      this._data.profilePage.newPostText = action.newText;
+      store._callSubscriber (this._data) 
+    }else if ( action.type === "CHANGE-NEW-MESSAGE-TEXT"){
+      this._data.messagesPage.newMessageText = action.newText;
+      store._callSubscriber (this._data);
+    }else if ( action.type === "ADD-NEW-MESSAGE"){
+      let newMessage = {
+        id:this._data.messagesPage.messagesData.length+1,
+        message:this._data.messagesPage.newMessageText,
+      }
+      this._data.messagesPage.messagesData.push(newMessage);
+      this._data.messagesPage.newMessageText='';
+      store._callSubscriber (this._data);
+    }
+  } 
+  // addPost(){
+  //   let newPost = {
+  //     id:this._data.profilePage.postData.length+1,
+  //     text:this._data.profilePage.newPostText,
+  //     likes: Math.floor (Math.random()*1000)
+  //   }
+    
+  //   this._data.profilePage.postData.push(newPost);
+  //   this._data.profilePage.newPostText = '';
+  //   store._callSubscriber (this._data);
+  // },
+  // changeNewPostText(newText){
+  //   this._data.profilePage.newPostText = newText;
+  //   store._callSubscriber (this._data)
+  // },
+  // changeNewMessageText(newText){
+  //   this._data.messagesPage.newMessageText = newText;
+  //   store._callSubscriber (this._data);
+  // },
+  // addNewMessage(){
+  //   let newMessage = {
+  //     id:this._data.messagesPage.messagesData.length+1,
+  //     message:this._data.messagesPage.newMessageText,
+  //   }
+  //   this._data.messagesPage.messagesData.push(newMessage);
+  //   this._data.messagesPage.messagesData.newMessageText='';
+  //   store._callSubscriber (this._data);
+  // }
+  
 }
 
 
@@ -85,7 +115,7 @@ let store ={
 
 
 
-window.data = store.data;
+window.data = store._data;
 
 
 export default store;

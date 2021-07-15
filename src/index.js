@@ -12,11 +12,8 @@ import { BrowserRouter, Route, Link } from "react-router-dom";
 let rerenderEntireTree = ()=> {
   ReactDOM.render(
   <BrowserRouter>
-    <App data = { store.data } 
-         addPost={store.addPost.bind(store)}
-         changeNewPostText={store.changeNewPostText.bind(store)}
-         changeNewMessageText={store.changeNewMessageText.bind(store)}
-         addNewMessage={store.addNewMessage.bind(store)}/>
+    <App data = { store.getState() } 
+         dispatch= { store.dispatch.bind(store) }/>
   </BrowserRouter>, document.getElementById('root'));
 }
 
